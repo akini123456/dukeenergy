@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duke Energy | For Your Home</title>
+  <meta name="description" content="Educational replica. Manage your account, pay your bill, report outages and find energy-saving solutions." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="duke">
+  <!-- DISCLAIMER: Educational fan-made replica for a school project. Recreated styling/logo; not affiliated with, endorsed by, or operated by Duke Energy. -->
+
+  <div class="topband"></div>
+
+  <header class="dh-header">
+    <div class="container dh-top">
+      <button class="dh-burger" id="navBurger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#" class="dh-logo" aria-label="Duke Energy home">
+        <img src="assets/logoduke.svg" alt="Duke Energy" width="150" height="48" />
+      </a>
+      <span class="dh-divider"></span>
+      <span class="dh-foryour">For Your Home</span>
+
+      <div class="dh-utility">
+        <a href="#">
+          <svg class="dh-uicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M4.5 7h15M4.5 17h15"/></svg> Espa&ntilde;ol</a>
+        <a href="#">
+          <svg class="dh-uicon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Select Location</a>
+        <a href="#">
+          <svg class="dh-uicon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg> Search</a>
+        <a href="#" class="dh-signin" id="signInBtn">
+          <svg class="dh-uicon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></svg> Sign in / Register</a>
+      </div>
+    </div>
+
+    <nav class="dh-nav" aria-label="Primary">
+      <div class="container dh-nav__row">
+        <div class="dh-item has-dd">
+          <button class="dh-link">My Account <i class="caret"></i></button>
+          <div class="dh-dd">
+            <a href="#" id="signInBtn2">Sign In / Register</a>
+            <a href="#">My Account Benefits</a>
+          </div>
+        </div>
+        <div class="dh-item has-dd">
+          <button class="dh-link">Billing &amp; Payments <i class="caret"></i></button>
+          <div class="dh-dd">
+            <a href="#">Pay Online</a>
+            <a href="#">Billing and Payment Options</a>
+            <a href="#">Special Assistance</a>
+            <a href="#">Reading Your Bill</a>
+            <a href="#">Payment Locations</a>
+            <a href="#">Bill Inserts</a>
+            <a href="#">Rates</a>
+          </div>
+        </div>
+        <div class="dh-item">
+          <a class="dh-link" href="#">Savings &amp; Solutions</a>
+        </div>
+        <div class="dh-item has-dd">
+          <button class="dh-link">Start, Stop &amp; Move <i class="caret"></i></button>
+          <div class="dh-dd">
+            <a href="#">Start Service</a>
+            <a href="#">Stop Service</a>
+            <a href="#">Move Service</a>
+            <a href="#">Transfer Service</a>
+          </div>
+        </div>
+        <div class="dh-item">
+          <a class="dh-link" href="#">Outages</a>
+        </div>
+        <div class="dh-item">
+          <a class="dh-link" href="#">Customer Service</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Slide-out navigation drawer -->
+  <div class="navdrawer" id="navDrawer" aria-hidden="true">
+    <div class="navdrawer__overlay" data-navclose></div>
+    <aside class="navdrawer__panel" role="dialog" aria-modal="true" aria-label="Navigation">
+      <div class="navdrawer__head">
+        <h2>Navigation</h2>
+        <button class="navdrawer__close" data-navclose aria-label="Close navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <nav class="navdrawer__body" aria-label="Site">
+        <div class="navdrawer__audience is-active">For Your Home</div>
+        <ul class="navdrawer__sub">
+          <li><a href="#">My Account <i class="rchev"></i></a></li>
+          <li><a href="#">Billing &amp; Payments <i class="rchev"></i></a></li>
+          <li><a href="#">Savings &amp; Solutions</a></li>
+          <li><a href="#">Start, Stop &amp; Move <i class="rchev"></i></a></li>
+          <li><a href="#">Outages</a></li>
+          <li><a href="#">Customer Service</a></li>
+        </ul>
+        <ul class="navdrawer__top">
+          <li><a href="#">For Your Business <i class="rchev"></i></a></li>
+          <li><a href="#">Our Company <i class="rchev"></i></a></li>
+          <li><a href="#">Investor Relations <i class="rchev"></i></a></li>
+          <li><a href="#">Partner With Us <i class="rchev"></i></a></li>
+          <li><a href="#">Safety &amp; Preparedness <i class="rchev"></i></a></li>
+          <li><a href="#">Energy Education <i class="rchev"></i></a></li>
+          <li><a href="#">Community <i class="rchev"></i></a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <!-- Hero -->
+  <section class="dh-hero">
+    <div class="container dh-hero__inner">
+      <h1 class="dh-hero__title">How can we help you?</h1>
+      <div class="dh-hero__cards">
+        <a href="#" class="dh-hcard" id="payCard">
+          <!-- Bill with dollar badge -->
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="48" height="48">
+            <rect x="8" y="6" width="24" height="30" rx="2" stroke="currentColor" stroke-width="2.2" fill="none"/>
+            <line x1="13" y1="14" x2="27" y2="14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="13" y1="20" x2="27" y2="20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="13" y1="26" x2="21" y2="26" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="34" cy="34" r="9" fill="currentColor"/>
+            <text x="34" y="38" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Arial,sans-serif">$</text>
+          </svg>
+          <span>Pay My Bill</span>
+        </a>
+        <a href="#" class="dh-hcard">
+          <!-- Power button -->
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="48" height="48">
+            <path d="M24 8v14" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M16 12.8A16 16 0 1 0 32 12.8" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span>Start/Stop Service</span>
+        </a>
+        <a href="#" class="dh-hcard">
+          <!-- Warning triangle with lightning bolt -->
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="48" height="48">
+            <path d="M24 5 L44 40 H4 Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" fill="none"/>
+            <path d="M26 17l-4 9h5l-4 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Outages</span>
+        </a>
+        <a href="#" class="dh-hcard">
+          <!-- Handshake inside a heart -->
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="48" height="48">
+            <path d="M24 40S8 30.5 8 19.5A8.5 8.5 0 0 1 24 15a8.5 8.5 0 0 1 16 4.5C40 30.5 24 40 24 40Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M16 21l3-2.5 4 2.5 4-2.5 5 4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19 18.5l-4 3.5v4l5 3.5 2-1.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 27.5l2.2 1.6M24 25.5l2.4 1.8M27 23.5l2.6 2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+          </svg>
+          <span>Financial Help</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section class="dh-feature">
+    <div class="container dh-feature__inner">
+      <div class="dh-feature__img" aria-hidden="true"></div>
+      <div class="dh-feature__text">
+        <p class="dh-eyebrow">FEATURED</p>
+        <h2>Summer Energy Solutions</h2>
+        <p>Manage your energy use during the summer heat with programs, solutions and practical tips.</p>
+        <a href="#" class="btn btn--accent">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- More for customers -->
+  <section class="dh-more">
+    <div class="container">
+      <h2 class="dh-more__title">More for customers</h2>
+      <div class="dh-more__grid">
+        <div class="dh-mcol">
+          <span class="dh-micon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.5A3.5 3.5 0 0 1 18 17H7Z"/><path d="M9 20l-1 2M13 20l-1 2M17 20l-1 2"/></svg>
+          </span>
+          <h3>We can help you prepare for storms</h3>
+          <ul class="dh-links">
+            <li><a href="#">Sign up to get outage alerts by text, email or phone call <i class="rchev"></i></a></li>
+            <li><a href="#">Plan ahead for potential outages <i class="rchev"></i></a></li>
+            <li><a href="#">Learn how we protect our power lines <i class="rchev"></i></a></li>
+            <li><a href="#">Safety tips for storm season <i class="rchev"></i></a></li>
+            <li><a href="#">Stay ready. Download our mobile app. <i class="rchev"></i></a></li>
+          </ul>
+        </div>
+        <div class="dh-mcol">
+          <span class="dh-micon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M10 12l2 2 4-4"/></svg>
+          </span>
+          <h3>Find the best way to pay your bill</h3>
+          <ul class="dh-links">
+            <li><a href="#">Get an online account for auto pay, usage analysis and more <i class="rchev"></i></a></li>
+            <li><a href="#">Make a one-time online payment <i class="rchev"></i></a></li>
+            <li><a href="#">In-person payment locations <i class="rchev"></i></a></li>
+            <li><a href="#">Need help paying your bill? <i class="rchev"></i></a></li>
+          </ul>
+        </div>
+        <div class="dh-mcol">
+          <span class="dh-micon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l5-3 5 3M15 21V11l4-2v12"/><path d="M8 11h2M8 15h2"/></svg>
+          </span>
+          <h3>Solutions for business owners</h3>
+          <ul class="dh-links">
+            <li><a href="#">Find solutions for your industry <i class="rchev"></i></a></li>
+            <li><a href="#">Clean energy and EV programs <i class="rchev"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="dh-footer">
+    <div class="dh-footer__top">
+      <p class="dh-tagline">BUILDING A <strong>SMARTER</strong> ENERGY FUTURE<sup>&reg;</sup></p>
+      <div class="dh-social" aria-label="Social media">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.5h2.5V5.5H14c-2.2 0-3.5 1.3-3.5 3.5v2H8.5v3h2v7h3v-7h2.3l.4-3h-2.7V9.3c0-.5.3-.8.8-.8z"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 4h2.7l-5.9 6.7L21 20h-5.4l-4.2-5.5L6.5 20H3.8l6.3-7.2L3 4h5.5l3.8 5zm-.95 14.4h1.5L7.5 5.5H5.9z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.6" cy="7.4" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.5h-3V20h3zM5 4a1.8 1.8 0 1 0 0 3.6A1.8 1.8 0 0 0 5 4zM20.5 20v-6.4c0-3.2-1.7-4.7-4-4.7-1.8 0-2.6 1-3.1 1.7V8.5h-3V20h3v-6.2c0-.3 0-.6.1-.8.3-.6.8-1.3 1.8-1.3 1.3 0 1.8 1 1.8 2.4V20z"/></svg></a>
+        <a href="#" aria-label="RSS"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="6.5" cy="17.5" r="2"/><path d="M4 4v3a13 13 0 0 1 13 13h3A16 16 0 0 0 4 4z"/><path d="M4 10v3a7 7 0 0 1 7 7h3a10 10 0 0 0-10-10z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.7 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22.3 12 31 31 0 0 0 22 8.2zM10 15V9l5.2 3z"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.3 2 1.6 3.6 3.5 3.9v2.6c-1.3 0-2.6-.4-3.6-1.1v5.9a5.4 5.4 0 1 1-5.4-5.4c.3 0 .5 0 .8.1v2.7a2.7 2.7 0 1 0 1.9 2.6V3z"/></svg></a>
+      </div>
+      <div class="dh-apps">
+        <a href="#" class="dh-app">
+          <svg class="dh-app__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.1 1.7-3.1 1.8-3.2-1-1.4-2.5-1.6-3-1.7-1.3-.1-2.5.8-3.1.8-.7 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.3 2-1.4 2.4-.4 6 1 8 .7 1 1.5 2 2.5 2 1 0 1.4-.6 2.6-.6s1.5.6 2.6.6 1.7-1 2.4-2c.7-1.1 1-2.1 1-2.2-.1 0-2.3-.9-2.3-3.1zM14.5 6.3c.5-.7.9-1.6.8-2.6-.8 0-1.8.6-2.4 1.2-.5.6-.9 1.5-.8 2.4.9.1 1.8-.4 2.4-1z"/></svg>
+          <span><small>Download on the</small><strong>App Store</strong></span>
+        </a>
+        <a href="#" class="dh-app">
+          <svg class="dh-app__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00d3ff" d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1L13 12.1v-.2L3.7 2.2z"/><path fill="#ffce00" d="M16.1 15.2 13 12.1v-.2l3.1-3.1.1.1 3.7 2.1c1.1.6 1.1 1.6 0 2.2z"/><path fill="#ff3a44" d="M16.2 15.1 13 12 3.6 21.7c.4.4 1 .4 1.7.1z"/><path fill="#00f076" d="M16.2 8.9 5.3 2.2c-.7-.4-1.3-.4-1.7.1L13 12z"/></svg>
+          <span><small>Get it on</small><strong>Google Play</strong></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="dh-footer__cols">
+      <div class="container dh-footer__grid">
+        <div>
+          <h4>Our Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">News Center</a></li>
+            <li><a href="#">Social Media</a></li>
+            <li><a href="#">Environment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Partner With Us</h4>
+          <ul>
+            <li><a href="#">Trade Allies</a></li>
+            <li><a href="#">Suppliers</a></li>
+            <li><a href="#">Asset Recovery</a></li>
+            <li><a href="#">Builders Developers</a></li>
+            <li><a href="#">Landlord Experience</a></li>
+            <li><a href="#">Economic Development</a></li>
+            <li><a href="#">Government and Municipalities</a></li>
+            <li><a href="#">Federal Infrastructure Funding</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Safety and Preparedness</h4>
+          <ul>
+            <li><a href="#">Storm Safety</a></li>
+            <li><a href="#">High Water and Dam Safety</a></li>
+            <li><a href="#">Natural Gas Safety</a></li>
+            <li><a href="#">Overhead Power Lines</a></li>
+            <li><a href="#">Electric Safety</a></li>
+            <li><a href="#">Nuclear Safety</a></li>
+            <li><a href="#">Identifying Our Employees</a></li>
+            <li><a href="#">Kids Safety</a></li>
+            <li><a href="#">Contractors First Responders</a></li>
+            <li><a href="#">Call Before You Dig</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#">Duke Energy Foundation</a></li>
+            <li><a href="#">Employee Engagement</a></li>
+            <li><a href="#">Special Assistance</a></li>
+            <li><a href="#">Lakes and Recreation</a></li>
+            <li><a href="#">Vegetation Management</a></li>
+            <li><a href="#">Alumni Network</a></li>
+            <li><a href="#">Energy Education</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="dh-footer__bold">
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">Home Services</a></li>
+            <li><a href="#">Survey Sweepstakes and Rules</a></li>
+            <li><a href="#">Regulatory Information and Public Notices</a></li>
+            <li><a href="#">Duke Energy One</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="dh-footer__bottom">
+      <div class="container dh-footer__bottom-row">
+        <p>&copy; Duke Energy Corporation. All Rights Reserved.</p>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">California Consumer Privacy Statement</a></li>
+          <li><a href="#">Do Not Sell or Share My Personal Information (CA)</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+      <p class="dh-disclaimer container">Educational replica for a school project &mdash; recreated styling and logo; not affiliated with Duke Energy.</p>
+    </div>
+  </footer>
+
+  <!-- Sign In modal -->
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button class="modal__close" data-close aria-label="Close">&times;</button>
+      <div class="modal__brand">
+        <img src="assets/logoduke.svg" alt="Duke Energy" width="150" height="48" />
+      </div>
+      <h2 id="loginTitle" class="modal__title">Sign in to your account</h2>
+      <form id="loginForm" class="loginform">
+        <label>Username
+          <input type="text" id="username" autocomplete="username" required />
+        </label>
+        <label>Password
+          <input type="password" id="password" autocomplete="current-password" required />
+        </label>
+        <p class="loginform__error" id="loginError" hidden>Invalid username or password. Please try again.</p>
+        <button type="submit" class="btn btn--accent btn--lg loginform__submit">Sign In</button>
+        <div class="loginform__links">
+          <a href="#">Forgot username?</a>
+          <a href="#">Forgot password?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="accounts.js?v=4"></script>
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Energy Bill | Duke Energy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="billbody">
+  <!-- Educational replica — recreated styling/logo; not affiliated with Duke Energy. -->
+
+  <div class="billbar container">
+    <a href="dashboard.html" class="billbar__back">&larr; Back to My Account</a>
+    <button class="dbtn dbtn--primary" id="printBtn">Download / Print PDF</button>
+  </div>
+
+  <div class="billpage" id="billPage">
+    <!-- ===== Top: masthead ===== -->
+    <div class="bill-top">
+      <div class="bill-brand">
+        <span class="bill-brand__mark">
+          <img src="assets/logoduke.svg" alt="Duke Energy" class="bill-logo" />
+          <span class="bill-brand__sub">FLORIDA</span>
+        </span>
+        <div class="bill-brand__contact">
+          <span>duke-energy.com</span>
+          <span>1-800-777-9898</span>
+        </div>
+      </div>
+      <div class="bill-head">
+        <h1>Your Energy Bill</h1>
+        <span class="bill-head__page">Page 1 of 3</span>
+        <table class="bill-head__meta">
+          <tr><td class="lbl">Service address</td><td></td></tr>
+          <tr><td class="name" id="bName"></td><td class="bill-head__date"><span>Bill date</span><strong id="bBillDate"></strong></td></tr>
+          <tr><td id="bAddr1"></td><td class="bill-head__date"><span>For service</span><strong id="bService"></strong></td></tr>
+          <tr><td id="bAddr2"></td><td class="bill-head__date"><span></span><strong id="bDays"></strong></td></tr>
+          <tr><td></td><td class="bill-head__acct"><span>Account number</span><strong id="bAcct"></strong></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- ===== Billing summary + thank you ===== -->
+    <div class="bill-mid">
+      <div class="bill-summary">
+        <h2 class="bill-h">Billing summary</h2>
+        <table class="bill-sumtable" id="bSummary"></table>
+      </div>
+      <div class="bill-thanks">
+        <span class="bill-thanks__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="11"/><text x="12" y="17" text-anchor="middle" font-size="14" font-weight="700" fill="#fff" font-family="Arial">$</text></svg>
+        </span>
+        <p class="bill-thanks__lead">Thank you for your payment.</p>
+        <p>Do you or does someone you know need help with energy bills or other essentials as a result of the pandemic? Help is available through new and existing federal assistance programs for those that qualify.</p>
+        <p>Duke Energy is here to help you save on your summer energy bills. See all the ways we can help you lower your energy use and better manage your bills at duke-energy.com/SummerHeat.</p>
+      </div>
+    </div>
+
+    <!-- ===== Usage snapshot ===== -->
+    <h2 class="bill-h bill-h--usage">Your usage snapshot</h2>
+    <div class="bill-usage">
+      <div class="bill-chart">
+        <p class="bill-chart__title">Electric usage history</p>
+        <div class="bill-chart__plot" id="bChart"></div>
+      </div>
+    </div>
+    <p class="bill-temp__title">Average temperature in degrees</p>
+    <div class="bill-temp" id="bTemps"></div>
+    <table class="bill-usetable">
+      <thead><tr><th></th><th>Current Month</th><th id="bLastYearHd"></th><th>12-Month Usage</th><th>Avg Monthly Usage</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="bill-usetable__row">Electric (kWh)</td>
+          <td id="bCurMonth"></td>
+          <td id="bLastYear"></td>
+          <td id="b12mo"></td>
+          <td id="bAvg"></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="bill-usetable__note">12-month usage based on most recent history</p>
+
+    <!-- ===== Payment stub ===== -->
+    <div class="bill-perf"><span>Please return this portion with your payment.  Thank you for your business.</span></div>
+
+    <div class="bill-stub">
+      <div class="bill-stub__left">
+        <div class="bill-brand">
+          <span class="bill-brand__mark bill-brand__mark--sm">
+            <img src="assets/logoduke.svg" alt="Duke Energy" class="bill-logo bill-logo--sm" />
+            <span class="bill-brand__sub">FLORIDA</span>
+          </span>
+        </div>
+        <p class="bill-stub__mail">Duke Energy Return Mail<br>PO Box 1090<br>Charlotte, NC 28201-1090</p>
+        <p class="bill-stub__cust"><strong id="bStubName"></strong><br><span id="bStubAddr1"></span><br><span id="bStubAddr2"></span></p>
+        <p class="bill-stub__proc">Duke Energy Payment Processing<br>PO Box 1094<br>Charlotte, NC 28201-1094</p>
+      </div>
+      <div class="bill-stub__right">
+        <p class="bill-stub__note"><strong>Mail your payment at least 7 days before the due date</strong> or pay instantly at duke-energy.com/billing.</p>
+        <div class="bill-stub__acctrow">
+          <span>Account number</span><strong id="bStubAcct"></strong>
+        </div>
+        <div class="bill-stub__draft">
+          <p class="bill-stub__drafthd">Amount of automatic draft</p>
+          <div class="bill-stub__draftbox">
+            <div class="bill-stub__amt"><strong id="bStubAmt"></strong><span>by <em id="bStubDue"></em></span></div>
+            <p class="bill-stub__draftnote">Your payment is scheduled to be made by monthly automatic draft on <span id="bStubDue2"></span></p>
+          </div>
+        </div>
+        <div class="bill-stub__lines">
+          <div><span class="bill-stub__line"></span><small>Add here, to help others with a contribution to Share the Light</small></div>
+          <div><span class="bill-stub__line"></span><small>Amount enclosed</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="bill-barcode" id="bBarcode"></div>
+  </div>
+
+  <p class="bill-disc container">Educational replica for a school project &mdash; recreated styling and logo; not affiliated with Duke Energy.</p>
+
+  <script src="accounts.js?v=4"></script>
+  <script src="bill.js?v=3"></script>
+</body>
+</html>
