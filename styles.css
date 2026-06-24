@@ -287,7 +287,6 @@ a:hover { text-decoration: underline; }
 .billcard__actions .btn--ghost-dark { color: #fff; border-color: rgba(255,255,255,.6); }
 .billcard__actions .btn--ghost-dark:hover { background: rgba(255,255,255,.15); }
 .billcard__paid { margin: 1.1rem 0 0; font-weight: 700; color: #b6f0c2; }
-#bDays { text-align: right }
 
 .usagecard h3 { margin: 0 0 .6rem; color: var(--navy); }
 .usagecard { padding: 1.6rem; }
