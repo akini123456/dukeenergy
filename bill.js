@@ -108,6 +108,94 @@
     '<div class="bill-barcode__bars">' + bars + '</div>' +
     '<div class="bill-barcode__num">' + digits.split("").join(" ") + '</div>';
 
+  // ---- Pages 2 & 3 ----
+  // Date helpers so all sub-periods stay consistent with this account's service dates
+  const MONTHS = { jan:["Jan",31], feb:["Feb",28], mar:["Mar",31], apr:["Apr",30],
+    may:["May",31], jun:["Jun",30], jul:["Jul",31], aug:["Aug",31],
+    sep:["Sep",30], oct:["Oct",31], nov:["Nov",30], dec:["Dec",31] };
+  const ORDER = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+  const parseMD = (s) => {
+    const bits = String(s).trim().split(/\s+/);
+    const key = bits[0].slice(0, 3).toLowerCase();
+    return { key: key, abbr: (MONTHS[key] || ["", 30])[0], last: (MONTHS[key] || ["", 30])[1], day: parseInt(bits[1], 10) || 1 };
+  };
+  const nextAbbr = (key) => MONTHS[ORDER[(ORDER.indexOf(key) + 1) % 12]][0];
+
+  const from = parseMD(acct.serviceFrom);
+  const to = parseMD(acct.serviceTo);
+  const periodFull = from.abbr + " " + from.day + " to " + to.abbr + " " + to.day;
+  const periodDash = from.abbr + " " + from.day + " - " + to.abbr + " " + to.day;
+  const sub1 = from.abbr + " " + from.day + " to " + from.abbr + " " + from.last;
+  const sub2 = nextAbbr(from.key) + " 01 to " + to.abbr + " " + to.day;
+  const days1 = Math.max(1, from.last - from.day + 1);
+  const days2 = Math.max(1, to.day);
+
+  set("p2Acct", acct.accountNumber);
+  set("p3Acct", acct.accountNumber);
+  set("p2NextRead", nextAbbr(to.key) + " " + to.day);
+
+  // Meter usage snapshot
+  const kWh = acct.currentMonthKwh;
+  const prevRead = acct.meterPrev || 1000;
+  const actualRead = prevRead + kWh;
+  const meter = acct.meterNumber || "336269538";
+  const num = (n) => Number(n).toLocaleString("en-US");
+  set("p3Meter", meter);
+  set("p3ElecMeter", meter);
+  set("p3ActLabel", to.abbr + " " + to.day);
+  set("p3PrevLabel", from.abbr + " " + from.day);
+  set("p3Actual", num(actualRead));
+  set("p3Prev", "- " + num(prevRead));
+  set("p3Used", num(kWh) + " kWh");
+  set("p3Billed", num(kWh) + ".000 kWh");
+  set("p3SLPeriod", periodDash);
+  set("p3LightPeriod", periodFull);
+  set("p3ElecPeriod", periodFull);
+
+  // Taxes
+  set("p3Tax", money(acct.taxes));
+  set("p3TaxTotal", money(acct.taxes));
+
+  const amt = (n) => Number(n).toFixed(2);
+  const rate8 = (n) => "$" + Number(n).toFixed(8);
+  const liRow = (d, v, cls) => '<div class="bill-li ' + (cls || "") + '"><span>' + d + "</span><span>" + (v || "") + "</span></div>";
+
+  // Lighting breakdown (sums to currentLighting; fixture $3.25 + small storm recovery)
+  const lightStorm = Math.round((acct.currentLighting - 3.25) * 100) / 100;
+  const ls1 = Math.round(lightStorm * 0.5 * 100) / 100;
+  const ls2 = Math.round((lightStorm - ls1) * 100) / 100;
+  document.getElementById("p3LightRows").innerHTML =
+    liRow("Storm Recovery Cost - " + sub1, "") +
+    liRow("13.800 kWh @ $0.00045000", "$" + amt(ls1), "bill-li--sub") +
+    liRow("Storm Recovery Cost - " + sub2, "") +
+    liRow("32.200 kWh @ $0.00034000", amt(ls2), "bill-li--sub") +
+    liRow("Fixture Charge", "") +
+    liRow("SV 95HL UG WP5", "", "bill-li--sub") +
+    liRow("1.000 @ $3.25000000", "3.25", "bill-li--sub") +
+    liRow("Total Current Charges", money(acct.currentLighting), "bill-li--total");
+
+  // Electric breakdown (computed so the line items sum to currentElectric)
+  const basic = 14.0;
+  const renewable = 1.41;
+  const remaining = Math.round((acct.currentElectric - basic - renewable) * 100) / 100;
+  const stormElec = Math.round(remaining * 0.0205 * 100) / 100;
+  const energyCharge = Math.round((remaining - stormElec) * 100) / 100;
+  const energyRate = energyCharge / kWh;
+  const storm1 = Math.round(stormElec * (days1 / (days1 + days2)) * 100) / 100;
+  const storm2 = Math.round((stormElec - storm1) * 100) / 100;
+  const kWh1 = Math.round(kWh * days1 / (days1 + days2));
+  const kWh2 = kWh - kWh1;
+  document.getElementById("p3ElecRows").innerHTML =
+    liRow("Basic Customer Charge", "$" + amt(basic)) +
+    liRow("Energy Charge", "") +
+    liRow(num(kWh) + ".000 kWh @ " + rate8(energyRate), amt(energyCharge), "bill-li--sub") +
+    liRow("Storm Recovery Cost - " + sub1, "") +
+    liRow(num(kWh1) + ".000 kWh @ " + rate8(storm1 / kWh1), amt(storm1), "bill-li--sub") +
+    liRow("Storm Recovery Cost - " + sub2, "") +
+    liRow(num(kWh2) + ".000 kWh @ " + rate8(storm2 / kWh2), amt(storm2), "bill-li--sub") +
+    liRow("Renewable Energy Rider", amt(renewable)) +
+    liRow("Total Current Charges", money(acct.currentElectric), "bill-li--total");
+
   // ---- Print ----
   const printBtn = document.getElementById("printBtn");
   if (printBtn) printBtn.addEventListener("click", () => window.print());
