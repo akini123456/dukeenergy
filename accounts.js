@@ -17,9 +17,9 @@ window.TE_ACCOUNTS = {
     ratePlan: "Residential Service (RS-1)",
 
     // Bill header
-    billDate: "Jun 25, 2026",
-    serviceFrom: "May 22",
-    serviceTo: "June 21",
+    billDate: "Jul 25, 2026",
+    serviceFrom: "Jun 22",
+    serviceTo: "Jul 21",
     serviceYear: "2026",
     days: 30,
     dueDate: "Aug 19, 2026",
@@ -28,7 +28,7 @@ window.TE_ACCOUNTS = {
     // Billing summary
     previousBalance: 195.28,
     paymentReceived: 195.28,
-    paymentDate: "Jun 22",
+    paymentDate: "Jun 23",
     currentElectric: 287.05,
     currentLighting: 3.27,
     taxes: 20.32,
@@ -55,7 +55,7 @@ window.TE_ACCOUNTS = {
       { m: "May", k: 1560, y: "cur" },  { m: "Jun", k: 2124, y: "cur" },
       { m: "Jul", k: 2427, y: "cur" }
     ],
-    temps: [79,79,72,65,49,51,39,47,55,61,70,77,79]
+    temps: [83,83,82,76,69,63,61,63,68,72,78,82,83]
   },
 
   "manavvohra": {
@@ -68,16 +68,16 @@ window.TE_ACCOUNTS = {
     serviceAddress: "310 79th Ave, Unit 1, St Pete Beach, FL 33706",
     mailingAddress: "310 79th Ave, Unit 1, St Pete Beach, FL 33706",
     ratePlan: "Residential Service (RS-1)",
-    billDate: "Jun 25, 2026",
-    serviceFrom: "May 22",
-    serviceTo: "June 21",
+    billDate: "Jul 23, 2026",
+    serviceFrom: "Jun 20",
+    serviceTo: "Jul 19",
     serviceYear: "2026",
     days: 30,
-    dueDate: "Aug 19, 2026",
-    dueDateShort: "Aug 19",
+    dueDate: "Aug 17, 2026",
+    dueDateShort: "Aug 17",
     previousBalance: 168.93,
     paymentReceived: 168.93,
-    paymentDate: "Jun 22",
+    paymentDate: "Jun 21",
     currentElectric: 152.40,
     currentLighting: 3.27,
     taxes: 13.26,
@@ -99,7 +99,7 @@ window.TE_ACCOUNTS = {
       { m: "May", k: 1255, y: "cur" },  { m: "Jun", k: 1340, y: "cur" },
       { m: "Jul", k: 1395, y: "cur" }
     ],
-    temps: [79,79,72,65,49,51,39,47,55,61,70,77,79]
+    temps: [83,83,82,76,69,63,61,63,68,72,78,82,83]
   },
 
   "ishanarora": {
@@ -112,16 +112,16 @@ window.TE_ACCOUNTS = {
     serviceAddress: "310 79th Ave, Unit 2, St Pete Beach, FL 33706",
     mailingAddress: "310 79th Ave, Unit 2, St Pete Beach, FL 33706",
     ratePlan: "Residential Service (RS-1)",
-    billDate: "Jun 25, 2026",
-    serviceFrom: "May 22",
-    serviceTo: "June 21",
+    billDate: "Jul 28, 2026",
+    serviceFrom: "Jun 25",
+    serviceTo: "Jul 24",
     serviceYear: "2026",
     days: 30,
-    dueDate: "Aug 19, 2026",
-    dueDateShort: "Aug 19",
+    dueDate: "Aug 22, 2026",
+    dueDateShort: "Aug 22",
     previousBalance: 117.42,
     paymentReceived: 117.42,
-    paymentDate: "Jun 22",
+    paymentDate: "Jun 26",
     currentElectric: 103.40,
     currentLighting: 3.27,
     taxes: 10.75,
@@ -143,7 +143,7 @@ window.TE_ACCOUNTS = {
       { m: "May", k: 900,  y: "cur" },  { m: "Jun", k: 945,  y: "cur" },
       { m: "Jul", k: 965,  y: "cur" }
     ],
-    temps: [79,79,72,65,49,51,39,47,55,61,70,77,79]
+    temps: [83,83,82,76,69,63,61,63,68,72,78,82,83]
   },
 
   "piakini": {
@@ -156,16 +156,16 @@ window.TE_ACCOUNTS = {
     serviceAddress: "410 73rd Ave, St Pete Beach, FL 33706",
     mailingAddress: "410 73rd Ave, St Pete Beach, FL 33706",
     ratePlan: "Residential Service (RS-1)",
-    billDate: "Jun 25, 2026",
-    serviceFrom: "May 22",
-    serviceTo: "June 21",
+    billDate: "Jul 21, 2026",
+    serviceFrom: "Jun 18",
+    serviceTo: "Jul 17",
     serviceYear: "2026",
     days: 30,
-    dueDate: "Aug 19, 2026",
-    dueDateShort: "Aug 19",
+    dueDate: "Aug 15, 2026",
+    dueDateShort: "Aug 15",
     previousBalance: 156.40,
     paymentReceived: 156.40,
-    paymentDate: "Jun 22",
+    paymentDate: "Jun 19",
     currentElectric: 178.40,
     currentLighting: 3.27,
     taxes: 21.51,
@@ -187,10 +187,10 @@ window.TE_ACCOUNTS = {
       { m: "May", k: 1420, y: "cur" },  { m: "Jun", k: 1590, y: "cur" },
       { m: "Jul", k: 1685, y: "cur" }
     ],
-    temps: [79,79,72,65,49,51,39,47,55,61,70,77,79]
+    temps: [83,83,82,76,69,63,61,63,68,72,78,82,83]
   },
 
-  // --- Individual logins (single name) for the May 2026 billing cycle ---
+  // --- Individual single-name logins (same July 2026 cycle) ---
   "haraseessingh": {
     password: "123456",
     name: "Harasees Singh",
@@ -200,16 +200,16 @@ window.TE_ACCOUNTS = {
     serviceAddress: "8884 Bengal Ct, Kissimmee, FL 33706",
     mailingAddress: "8884 Bengal Ct, Kissimmee, FL 33706-6206",
     ratePlan: "Residential Service (RS-1)",
-    billDate: "May 25, 2026",
-    serviceFrom: "Apr 22",
-    serviceTo: "May 21",
+    billDate: "Jul 26, 2026",
+    serviceFrom: "Jun 23",
+    serviceTo: "Jul 22",
     serviceYear: "2026",
     days: 30,
-    dueDate: "Jun 19, 2026",
-    dueDateShort: "Jun 19",
+    dueDate: "Aug 20, 2026",
+    dueDateShort: "Aug 20",
     previousBalance: 184.50,
     paymentReceived: 184.50,
-    paymentDate: "May 22",
+    paymentDate: "Jun 24",
     currentElectric: 256.30,
     currentLighting: 3.27,
     taxes: 18.65,
@@ -223,15 +223,15 @@ window.TE_ACCOUNTS = {
     twelveMonthUsage: "13,640",
     avgMonthlyUsage: 1137,
     usage: [
-      { m: "May", k: 1650, y: "prev" }, { m: "Jun", k: 1980, y: "prev" },
-      { m: "Jul", k: 2120, y: "prev" }, { m: "Aug", k: 1990, y: "prev" },
-      { m: "Sep", k: 1760, y: "prev" }, { m: "Oct", k: 1400, y: "prev" },
-      { m: "Nov", k: 1150, y: "prev" }, { m: "Dec", k: 1020, y: "prev" },
-      { m: "Jan", k: 980,  y: "cur" },  { m: "Feb", k: 940,  y: "cur" },
-      { m: "Mar", k: 1080, y: "cur" },  { m: "Apr", k: 1520, y: "cur" },
-      { m: "May", k: 2180, y: "cur" }
+      { m: "Jul", k: 1650, y: "prev" }, { m: "Aug", k: 1850, y: "prev" },
+      { m: "Sep", k: 1720, y: "prev" }, { m: "Oct", k: 1400, y: "prev" },
+      { m: "Nov", k: 1100, y: "prev" }, { m: "Dec", k: 980,  y: "prev" },
+      { m: "Jan", k: 920,  y: "cur" },  { m: "Feb", k: 880,  y: "cur" },
+      { m: "Mar", k: 1020, y: "cur" },  { m: "Apr", k: 1450, y: "cur" },
+      { m: "May", k: 1820, y: "cur" },  { m: "Jun", k: 2080, y: "cur" },
+      { m: "Jul", k: 2180, y: "cur" }
     ],
-    temps: [77,79,79,79,77,70,61,55,49,51,55,65,75]
+    temps: [83,83,82,76,69,63,61,63,68,72,78,82,83]
   },
 
   "siddharthvohra": {
@@ -243,16 +243,16 @@ window.TE_ACCOUNTS = {
     serviceAddress: "310 79th Ave, Unit 1, St Pete Beach, FL 33706",
     mailingAddress: "310 79th Ave, Unit 1, St Pete Beach, FL 33706",
     ratePlan: "Residential Service (RS-1)",
-    billDate: "May 25, 2026",
-    serviceFrom: "Apr 22",
-    serviceTo: "May 21",
+    billDate: "Jul 24, 2026",
+    serviceFrom: "Jun 21",
+    serviceTo: "Jul 20",
     serviceYear: "2026",
     days: 30,
-    dueDate: "Jun 19, 2026",
-    dueDateShort: "Jun 19",
+    dueDate: "Aug 18, 2026",
+    dueDateShort: "Aug 18",
     previousBalance: 159.10,
     paymentReceived: 159.10,
-    paymentDate: "May 22",
+    paymentDate: "Jun 22",
     currentElectric: 141.20,
     currentLighting: 3.27,
     taxes: 12.40,
@@ -262,19 +262,19 @@ window.TE_ACCOUNTS = {
     paperless: true,
     pickDueDate: false,
     currentMonthKwh: 1290,
-    lastYearMonthKwh: 1120,
+    lastYearMonthKwh: 1180,
     twelveMonthUsage: "14,120",
     avgMonthlyUsage: 1177,
     usage: [
-      { m: "May", k: 1120, y: "prev" }, { m: "Jun", k: 1290, y: "prev" },
-      { m: "Jul", k: 1380, y: "prev" }, { m: "Aug", k: 1300, y: "prev" },
-      { m: "Sep", k: 1180, y: "prev" }, { m: "Oct", k: 1010, y: "prev" },
-      { m: "Nov", k: 880,  y: "prev" }, { m: "Dec", k: 820,  y: "prev" },
-      { m: "Jan", k: 800,  y: "cur" },  { m: "Feb", k: 790,  y: "cur" },
+      { m: "Jul", k: 1180, y: "prev" }, { m: "Aug", k: 1340, y: "prev" },
+      { m: "Sep", k: 1280, y: "prev" }, { m: "Oct", k: 1090, y: "prev" },
+      { m: "Nov", k: 900,  y: "prev" }, { m: "Dec", k: 830,  y: "prev" },
+      { m: "Jan", k: 810,  y: "cur" },  { m: "Feb", k: 790,  y: "cur" },
       { m: "Mar", k: 900,  y: "cur" },  { m: "Apr", k: 1080, y: "cur" },
-      { m: "May", k: 1290, y: "cur" }
+      { m: "May", k: 1180, y: "cur" },  { m: "Jun", k: 1250, y: "cur" },
+      { m: "Jul", k: 1290, y: "cur" }
     ],
-    temps: [77,79,79,79,77,70,61,55,49,51,55,65,75]
+    temps: [83,83,82,76,69,63,61,63,68,72,78,82,83]
   },
 
   "anisharora": {
@@ -286,16 +286,16 @@ window.TE_ACCOUNTS = {
     serviceAddress: "310 79th Ave, Unit 2, St Pete Beach, FL 33706",
     mailingAddress: "310 79th Ave, Unit 2, St Pete Beach, FL 33706",
     ratePlan: "Residential Service (RS-1)",
-    billDate: "May 25, 2026",
-    serviceFrom: "Apr 22",
-    serviceTo: "May 21",
+    billDate: "Jul 27, 2026",
+    serviceFrom: "Jun 24",
+    serviceTo: "Jul 23",
     serviceYear: "2026",
     days: 30,
-    dueDate: "Jun 19, 2026",
-    dueDateShort: "Jun 19",
+    dueDate: "Aug 21, 2026",
+    dueDateShort: "Aug 21",
     previousBalance: 112.30,
     paymentReceived: 112.30,
-    paymentDate: "May 22",
+    paymentDate: "Jun 25",
     currentElectric: 97.10,
     currentLighting: 3.27,
     taxes: 9.05,
@@ -309,14 +309,14 @@ window.TE_ACCOUNTS = {
     twelveMonthUsage: "9,560",
     avgMonthlyUsage: 797,
     usage: [
-      { m: "May", k: 980, y: "prev" }, { m: "Jun", k: 1010, y: "prev" },
-      { m: "Jul", k: 970, y: "prev" }, { m: "Aug", k: 930, y: "prev" },
-      { m: "Sep", k: 880, y: "prev" }, { m: "Oct", k: 760, y: "prev" },
-      { m: "Nov", k: 680, y: "prev" }, { m: "Dec", k: 640, y: "prev" },
-      { m: "Jan", k: 650, y: "cur" }, { m: "Feb", k: 620, y: "cur" },
-      { m: "Mar", k: 700, y: "cur" }, { m: "Apr", k: 800, y: "cur" },
-      { m: "May", k: 905, y: "cur" }
+      { m: "Jul", k: 980, y: "prev" }, { m: "Aug", k: 1010, y: "prev" },
+      { m: "Sep", k: 950, y: "prev" }, { m: "Oct", k: 860, y: "prev" },
+      { m: "Nov", k: 700, y: "prev" }, { m: "Dec", k: 650, y: "prev" },
+      { m: "Jan", k: 660, y: "cur" }, { m: "Feb", k: 630, y: "cur" },
+      { m: "Mar", k: 710, y: "cur" }, { m: "Apr", k: 800, y: "cur" },
+      { m: "May", k: 870, y: "cur" }, { m: "Jun", k: 895, y: "cur" },
+      { m: "Jul", k: 905, y: "cur" }
     ],
-    temps: [77,79,79,79,77,70,61,55,49,51,55,65,75]
+    temps: [83,83,82,76,69,63,61,63,68,72,78,82,83]
   }
 };

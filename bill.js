@@ -13,9 +13,8 @@
   const parts = acct.serviceAddress.split(",");
   const street = parts.slice(0, parts.length - 2).join(",").trim();
   const cityState = parts.slice(parts.length - 2).join(",").trim();
-  // Joint account holders are stacked on separate lines (Duke-style)
-  const names = acct.name2 ? [acct.name, acct.name2] : [acct.name];
-  const nameHtml = names.map((n) => n.toUpperCase()).join("<br>");
+  // One name only — whoever's login is being used
+  const nameHtml = acct.name.toUpperCase();
   const setHtml = (id, html) => { const el = document.getElementById(id); if (el) el.innerHTML = html; };
 
   // ---- Masthead ----
@@ -95,18 +94,12 @@
   set("bStubAcct", acct.accountNumber);
   set("bStubAmt", money(acct.totalDue));
   set("bStubDue", acct.dueDateShort);
-  set("bStubDue2", acct.dueDateShort);
+  set("bStubDue3", acct.dueDateShort);
 
-  // ---- Barcode (decorative) ----
+  // ---- Bottom scan line (numbers only, Courier — no barcode) ----
   const digits = (acct.accountNumber.replace(/\s/g, "") + "0000550000000000000000003106400000" + Math.round(acct.totalDue * 100));
-  let bars = "";
-  for (let i = 0; i < 95; i++) {
-    const w = (i % 7 === 0 || i % 3 === 0) ? 3 : (i % 2 === 0 ? 1 : 2);
-    bars += '<span style="width:' + w + 'px"></span>';
-  }
   document.getElementById("bBarcode").innerHTML =
-    '<div class="bill-barcode__bars">' + bars + '</div>' +
-    '<div class="bill-barcode__num">' + digits.split("").join(" ") + '</div>';
+    '<div class="bill-barcode__num">' + digits + '</div>';
 
   // ---- Pages 2 & 3 ----
   // Date helpers so all sub-periods stay consistent with this account's service dates
