@@ -690,8 +690,22 @@ svg.dh-uicon { width: 18px; height: 18px; flex: none; }
 .bill-stub { display: grid; grid-template-columns: 1fr 1.12fr; gap: 26px; padding-top: 18px; }
 .bill-stub__mail, .bill-stub__proc, .bill-stub__cust, .bill-stub__custaddr { font-size: 10px; line-height: 1.5; }
 .bill-stub__mail { margin: 8px 0; }
-.bill-stub__cust { margin: 14px 0 0; }
-.bill-stub__custaddr { margin: 0; }
+.bill-stub__custblock {
+  width: fit-content;
+  margin: 14px auto 0;   /* auto on left/right = centers the block */
+}
+
+.bill-stub__cust,
+.bill-stub__custaddr {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: left;      /* text inside stays left-aligned */
+}
+
+.bill-stub__cust {
+  font-weight: 700;
+}
 .bill-stub__proc { margin: 16px 0 0; }
 .bill-stub__note { font-size: 10px; margin: 0 0 10px; line-height: 1.4; }
 .bill-stub__note strong { font-weight: 700; }
