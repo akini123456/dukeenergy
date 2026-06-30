@@ -192,4 +192,24 @@
   // ---- Print ----
   const printBtn = document.getElementById("printBtn");
   if (printBtn) printBtn.addEventListener("click", () => window.print());
+
+  // ---- Mobile: scale the whole bill to fit the screen like a PDF page ----
+  function fitBill() {
+    const scaler = document.querySelector(".billscaler");
+    const sheet = document.querySelector(".billsheet");
+    if (!scaler || !sheet) return;
+    const sheetW = 820;
+    const avail = document.documentElement.clientWidth;
+    if (avail < sheetW) {
+      const scale = avail / sheetW;
+      sheet.style.transform = "scale(" + scale + ")";
+      scaler.style.height = sheet.offsetHeight * scale + "px";
+    } else {
+      sheet.style.transform = "";
+      scaler.style.height = "";
+    }
+  }
+  fitBill();
+  window.addEventListener("resize", fitBill);
+  window.addEventListener("load", fitBill);
 })();

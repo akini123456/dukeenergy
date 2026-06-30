@@ -733,16 +733,17 @@ svg.dh-uicon { width: 18px; height: 18px; flex: none; }
 .bill-detbox { border: 1.5px solid #2f363c; padding: 9px 12px; }
 .bill-detnote { font-size: 11px; color: #2f363c; padding-top: 4px; line-height: 1.4; }
 
-@media (max-width: 700px) {
-  .bill-cols2, .bill-detail { grid-template-columns: 1fr; gap: 14px; }
-  .bill-usebox { max-width: 100%; }
-  .billpage { padding: 22px 18px; }
-  .bill-top, .bill-mid, .bill-stub { grid-template-columns: 1fr; gap: 14px; }
-  .bill-head__page { float: none; display: block; margin: 4px 0 0; }
-  .bill-usetable { width: 100%; }
+/* On mobile, show the bill as a scaled-down PDF page (fixed paper layout),
+   not a reflowed long document. JS sets the scale to fit the device width. */
+.billscaler { width: 100%; overflow: hidden; }
+.billsheet { width: 820px; margin: 0 auto; transform-origin: top left; }
+@media (max-width: 819px) {
+  .billsheet { margin: 0; }
 }
 @media print {
   .billbar, .bill-disc, .topband { display: none !important; }
   .billbody { background: #fff; }
+  .billscaler { height: auto !important; overflow: visible !important; }
+  .billsheet { transform: none !important; width: auto; margin: 0; }
   .billpage { box-shadow: none; margin: 0; max-width: none; }
 }
