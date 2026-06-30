@@ -94,7 +94,14 @@
   set("bStubAcct", acct.accountNumber);
   set("bStubAmt", money(acct.totalDue));
   set("bStubDue", acct.dueDateShort);
-  set("bStubDue3", acct.dueDateShort);
+  // Autopay accounts show "Amount of automatic draft"; others show "Amount due" + late-charge note
+  if (acct.autopay) {
+    set("bStubDueHd", "Amount of automatic draft");
+    setHtml("bStubNote", "<em>Your payment is scheduled to be made by monthly automatic draft on " + acct.dueDateShort + ".</em>");
+  } else {
+    set("bStubDueHd", "Amount due");
+    setHtml("bStubNote", "<em>After " + acct.dueDateShort + ", a late charge will apply.</em>");
+  }
 
   // ---- Bottom scan line (numbers only, Courier — no barcode) ----
   const digits = (acct.accountNumber.replace(/\s/g, "") + "0000550000000000000000003106400000" + Math.round(acct.totalDue * 100));

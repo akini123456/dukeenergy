@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Energy Bill | Duke Energy</title>
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=8" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
@@ -116,10 +116,10 @@
         <div class="bill-stub__payrow">
           <div class="bill-stub__acct2"><span>Account number</span><strong id="bStubAcct"></strong></div>
           <div class="bill-stub__due">
-            <div class="bill-stub__duehd">Amount due</div>
+            <div class="bill-stub__duehd" id="bStubDueHd">Amount due</div>
             <div class="bill-stub__duebody">
               <div class="bill-stub__duebox"><strong id="bStubAmt"></strong><span>by <em id="bStubDue"></em></span></div>
-              <div class="bill-stub__latebox"><em>After <span id="bStubDue3"></span>, a late charge will apply.</em></div>
+              <div class="bill-stub__latebox" id="bStubNote"></div>
             </div>
           </div>
         </div>
@@ -308,6 +308,6 @@
   <p class="bill-disc container">Educational replica for a school project &mdash; recreated styling and logo; not affiliated with Duke Energy.</p>
 
   <script src="accounts.js?v=8"></script>
-  <script src="bill.js?v=8"></script>
+  <script src="bill.js?v=9"></script>
 </body>
 </html>

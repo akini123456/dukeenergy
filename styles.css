@@ -714,7 +714,7 @@ svg.dh-uicon { width: 18px; height: 18px; flex: none; }
 .bill-imp h4 { font-size: 12px; font-weight: 700; margin: 0 0 3px; }
 .bill-imp p { font-size: 11px; margin: 0; color: #2f363c; line-height: 1.42; }
 
-.bill-usebox { border: 1.5px solid #2f363c; padding: 9px 12px; margin-bottom: 12px; max-width: 60%; }
+.bill-usebox { border: 1.5px solid #2f363c; padding: 9px 12px; margin-bottom: 12px; width: 60%; }
 .bill-usebox__loc { font-size: 11px; margin: 2px 0 6px; color: #2f363c; }
 .bill-detbox__title { font-weight: 700; font-size: 11.5px; margin: 0 0 4px; }
 .bill-detbox__sub { font-weight: 700; font-size: 11px; margin: 0 0 4px; }
@@ -730,7 +730,7 @@ svg.dh-uicon { width: 18px; height: 18px; flex: none; }
 .bill-sltable td { padding: 2px 0; }
 .bill-sltable tfoot td { border-top: 1.5px solid #2f363c; font-weight: 700; padding-top: 4px; }
 
-.bill-detail { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 26px; align-items: start; margin-bottom: 6px; }
+.bill-detail { display: grid; grid-template-columns: 60% 1fr; gap: 22px; align-items: start; margin-bottom: 6px; }
 .bill-detbox { border: 1.5px solid #2f363c; padding: 9px 12px; }
 .bill-detnote { font-size: 11px; color: #2f363c; padding-top: 4px; line-height: 1.4; }
 
