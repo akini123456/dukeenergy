@@ -629,10 +629,30 @@ svg.dh-uicon { width: 18px; height: 18px; flex: none; }
 .bill-head__svc .name { font-weight: 400; }
 .bill-head__info { font-size: 11px; flex: none; }
 /* Labels right-aligned, values in a left-aligned column (Bill date / For service / Account number) */
-.bhi { display: grid; grid-template-columns: 92px auto; column-gap: 10px; align-items: baseline; padding: 1px 0; }
+/* .bhi { display: grid; grid-template-columns: 92px auto; column-gap: 10px; align-items: baseline; padding: 1px 0; }
 .bhi span { color: #5a6066; text-align: right; }
 .bhi strong { font-weight: 700; white-space: nowrap; }
-.bhi--acct { margin-top: 7px; }
+.bhi--acct { margin-top: 7px; } */
+.bhi {
+  display: grid;
+  grid-template-columns: 92px auto;
+  column-gap: 10px;
+  align-items: baseline;
+}
+.bhi span { color: #5a6066; text-align: right; }
+.bhi strong {
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: right;   /* add this */
+}
+
+.bill-head__info {
+  font-size: 11px;
+  flex: 1;              /* was: flex: none */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* pushes the whole block to the right margin */
+}
 
 /* summary + thanks */
 .bill-mid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 26px; padding: 6px 0 18px; border-top: 2px solid #0a6ca6; margin-top: 4px; align-items: start; }
