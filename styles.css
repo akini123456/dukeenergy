@@ -628,10 +628,11 @@ svg.dh-uicon { width: 18px; height: 18px; flex: none; }
 .bill-head__svc .lbl { font-weight: 700; }
 .bill-head__svc .name { font-weight: 400; }
 .bill-head__info { font-size: 11px; flex: none; }
-.bhi { display: grid; grid-template-columns: 72px auto; column-gap: 6px; align-items: baseline; padding: 1px 0; }
-.bhi span { color: #5a6066; }
+/* Labels right-aligned, values in a left-aligned column (Bill date / For service / Account number) */
+.bhi { display: grid; grid-template-columns: 92px auto; column-gap: 10px; align-items: baseline; padding: 1px 0; }
+.bhi span { color: #5a6066; text-align: right; }
 .bhi strong { font-weight: 700; white-space: nowrap; }
-.bhi--acct { grid-template-columns: auto auto; margin-top: 7px; }
+.bhi--acct { margin-top: 7px; }
 
 /* summary + thanks */
 .bill-mid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 26px; padding: 6px 0 18px; border-top: 2px solid #0a6ca6; margin-top: 4px; align-items: start; }
